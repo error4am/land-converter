@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary SEO -->
-  <title>Land Unit Converter — Marla, Kanal, Acre, Sq Ft & Sq M | Pakistan</title>
-  <meta name="description" content="Fast online land unit converter for Pakistan — convert Marla, Kanal, Acre, Square Feet and Square Meters. Accurate plot size converter for buyers, sellers & real estate." />
+  <title>Land Unit Converter Pakistan — Marla, Kanal, Acre, Sq Ft & Sq M</title>
+  <meta name="description" content="Free land unit converter for Pakistan. Convert Marla, Kanal, Acre, Square Feet and Square Meters instantly with accurate plot size formulas, examples and FAQs." />
 
   <meta name="keywords" content="Marla to Kanal, Kanal to Acre, Land Converter Pakistan, plot size converter, marla calculator, kanal calculator, land units Pakistan" />
   <meta name="robots" content="index, follow" />
@@ -17,31 +17,79 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Land Unit Converter — Marla, Kanal, Acre (Pakistan)" />
-  <meta property="og:description" content="Quickly convert Marla, Kanal, Acre, Sq Ft & Sq M. Free, accurate, and optimized for Pakistani land units." />
+  <meta property="og:title" content="Land Unit Converter Pakistan — Marla, Kanal, Acre" />
+  <meta property="og:description" content="Convert Marla, Kanal, Acre, Sq Ft and Sq M instantly with a free Pakistani land unit converter, formulas and FAQs." />
   <meta property="og:url" content="https://error4am.github.io/land-converter/" />
   <meta property="og:image" content="https://error4am.github.io/land-converter/og-image.png" />
   <meta property="og:site_name" content="Land Unit Converter" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Land Unit Converter — Pakistan" />
-  <meta name="twitter:description" content="Convert Marla, Kanal, Acre, Sq Ft & Sq M instantly." />
+  <meta name="twitter:title" content="Land Unit Converter Pakistan" />
+  <meta name="twitter:description" content="Convert Marla, Kanal, Acre, Sq Ft and Sq M instantly with formulas and FAQs." />
   <meta name="twitter:image" content="https://error4am.github.io/land-converter/og-image.png" />
 
   <!-- Favicons -->
-  <link rel="icon" href="/land-converter/favicon.ico" />
+  <link rel="icon" type="image/png" href="og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Fade Animation -->
   <style>
+    :root {
+      --bg: #f6f2e8;
+      --surface: rgba(255, 255, 255, 0.78);
+      --surface-strong: #fffdf9;
+      --line: rgba(55, 65, 81, 0.1);
+      --text: #1f2937;
+      --muted: #5f6b63;
+      --accent: #1f7a5b;
+      --accent-soft: #e4f3eb;
+      --warm: #e7c88a;
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .animate-fadeIn { animation: fadeIn 0.3s forwards; }
+    .animate-fadeIn { animation: fadeIn 0.45s forwards; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(231, 200, 138, 0.32), transparent 28%),
+        radial-gradient(circle at top right, rgba(31, 122, 91, 0.14), transparent 24%),
+        linear-gradient(180deg, #fbf8f1 0%, #f3efe4 100%);
+      color: var(--text);
+    }
+    h1, h2 {
+      font-family: 'Source Serif 4', serif;
+      letter-spacing: -0.02em;
+    }
+    .glass-panel {
+      background: var(--surface);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      box-shadow: 0 22px 60px rgba(54, 58, 41, 0.08);
+    }
+    .section-panel {
+      background: var(--surface-strong);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 40px rgba(54, 58, 41, 0.06);
+    }
+    .chip {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(31, 122, 91, 0.12);
+    }
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(31, 122, 91, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31, 122, 91, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+      background-position: center;
+    }
   </style>
 
   <!-- Schema: Software Application -->
@@ -51,7 +99,7 @@
     "@type": "SoftwareApplication",
     "name": "Land Unit Converter (Pakistan)",
     "url": "https://error4am.github.io/land-converter/",
-    "description": "Convert Marla, Kanal, Acre, Square Feet and Square Meters instantly. Fast and accurate land unit calculator for Pakistan.",
+    "description": "Convert Marla, Kanal, Acre, Square Feet and Square Meters instantly. Free and accurate land unit calculator for Pakistan.",
     "applicationCategory": "Utility",
     "operatingSystem": "Web",
     "creator": {
@@ -96,25 +144,25 @@
         "name": "Is this converter accurate for Pakistan?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes — all conversions follow commonly used Pakistani land unit standards."
+          "text": "Yes. The calculator uses commonly used Pakistani land unit standards, including 1 Marla = 272.25 sq ft and 1 Kanal = 20 Marla."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many square feet is 5 Marla?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "5 Marla = 1361.25 square feet because 1 Marla equals 272.25 sq ft."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many Kanal is 10890 square feet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "10890 square feet is 2 Kanal because 1 Kanal equals 5445 sq ft."
         }
       }
-        {
-  "@type": "Question",
-  "name": "How many square feet is 5 Marla?",
-  "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "5 Marla = 5 × 272.25 = 1361.25 sq ft. Use the converter to calculate other values instantly."
-  }
-},
-{
-  "@type": "Question",
-  "name": "How many Kanal is 10890 square feet?",
-  "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "10890 sq ft ≈ 2 Kanal (since 1 Kanal = 5445 sq ft). The converter will give you the exact decimal result."
-  }
-}
 
       ]
   }
@@ -123,83 +171,227 @@
   <script src="script.js" defer></script>
 </head>
 
-<body class="bg-gray-100 font-sans">
+<body class="text-gray-900">
 
   <!-- Header -->
-  <header class="sticky top-0 bg-white shadow p-6 z-50">
-  <div class="max-w-3xl mx-auto text-center">
-    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900">Land Unit Converter — Marla, Kanal, Acre (Pakistan)</h1>
-    <p class="text-gray-700 mt-2 max-w-2xl mx-auto">
-      Quick, accurate plot size conversions for Pakistan — convert <strong>Marla, Kanal, Acre, Square Feet</strong> and <strong>Square Meters</strong> instantly. Ideal for buyers, sellers & developers.
-    </p>
-    <p class="text-sm text-gray-500 mt-2">Tip: enter a value and choose the unit (e.g., "5 Marla" or "0.5 Kanal").</p>
-  </div>
-</header>
+  <header class="sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-xl">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4 md:px-6">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-green-800">Pakistan Plot Tools</p>
+        <p class="text-sm text-gray-600">Land conversion, formulas and practical guides</p>
+      </div>
+      <nav class="hidden gap-5 text-sm font-semibold text-gray-700 md:flex">
+        <a class="hover:text-green-700" href="#converter">Converter</a>
+        <a class="hover:text-green-700" href="#units">Units</a>
+        <a class="hover:text-green-700" href="#faq">FAQ</a>
+        <a class="hover:text-green-700" href="#guides">Guides</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Main -->
-  <main class="flex flex-col items-center mt-6 px-4">
-<section class="max-w-md mx-auto mt-4 text-sm text-gray-600">
-  <strong>How to use:</strong> Type a number → select unit → see instant conversions.  
-  Common searches we support: <em>marla to kanal, kanal to marla, kanal to sqft, marla to sqft, acre to sqm, plot size converter Pakistan</em>.
-</section>
+  <main class="px-4 pb-16 pt-6 md:px-6">
+    <section class="hero-grid relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-white/50 px-5 py-10 md:px-8 md:py-12">
+      <div class="absolute inset-0 bg-gradient-to-br from-white/60 via-white/20 to-transparent"></div>
+      <div class="relative grid gap-6 lg:grid-cols-[1.2fr_0.9fr] lg:items-start">
+        <div class="animate-fadeIn">
+          <div class="mb-4 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-green-900">
+            <span class="chip rounded-full px-3 py-1">Marla</span>
+            <span class="chip rounded-full px-3 py-1">Kanal</span>
+            <span class="chip rounded-full px-3 py-1">Acre</span>
+            <span class="chip rounded-full px-3 py-1">Sq Ft</span>
+            <span class="chip rounded-full px-3 py-1">Sq M</span>
+          </div>
+          <h1 class="max-w-4xl text-4xl font-bold leading-tight text-gray-900 md:text-6xl">Land Unit Converter Pakistan for real plot decisions, not just raw numbers.</h1>
+          <p class="mt-5 max-w-2xl text-base leading-7 text-gray-700 md:text-lg">Free online Pakistan land converter for quick, accurate plot size calculations. Convert <strong>Marla, Kanal, Acre, Square Feet</strong> and <strong>Square Meters</strong> instantly for buying, selling, construction and property research.</p>
+          <div class="mt-6 flex flex-wrap gap-3 text-sm text-gray-700">
+            <a class="rounded-full bg-green-800 px-5 py-3 font-semibold text-white transition hover:bg-green-900" href="#converter">Start converting</a>
+            <a class="rounded-full border border-gray-300 bg-white/80 px-5 py-3 font-semibold text-gray-800 transition hover:border-green-300 hover:bg-green-50" href="#guides">Explore guides</a>
+          </div>
+          <div class="mt-8 grid gap-3 sm:grid-cols-3">
+            <div class="glass-panel rounded-2xl p-4">
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-green-800">Popular Query</p>
+              <p class="mt-2 text-lg font-bold text-gray-900">5 Marla = 1361.25 sq ft</p>
+              <p class="mt-1 text-sm text-gray-600">A common residential plot size search across Pakistan.</p>
+            </div>
+            <div class="glass-panel rounded-2xl p-4">
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-green-800">Trusted Formula</p>
+              <p class="mt-2 text-lg font-bold text-gray-900">1 Kanal = 20 Marla</p>
+              <p class="mt-1 text-sm text-gray-600">Useful for comparing listings written in different units.</p>
+            </div>
+            <div class="glass-panel rounded-2xl p-4">
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-green-800">Metric Ready</p>
+              <p class="mt-2 text-lg font-bold text-gray-900">1 Acre = 4046.86 sq m</p>
+              <p class="mt-1 text-sm text-gray-600">Helpful for maps, surveys and official documents.</p>
+            </div>
+          </div>
+        </div>
 
-    <!-- Converter Box -->
-    <div class="w-full max-w-md bg-white p-6 rounded-xl shadow-md animate-fadeIn">
-      <input 
-        type="number" 
-        id="value" 
-        placeholder="Enter value" 
-        class="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-green-400"
-      />
+        <div class="animate-fadeIn">
+          <section id="converter" class="glass-panel w-full rounded-[1.75rem] p-6 md:p-7" aria-labelledby="converter-title">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-[0.22em] text-green-800">Instant Tool</p>
+                <h2 id="converter-title" class="mt-2 text-3xl font-bold text-gray-900">Convert Pakistani Land Units</h2>
+              </div>
+              <div class="rounded-2xl bg-[var(--accent-soft)] px-3 py-2 text-right">
+                <p class="text-xs font-bold uppercase tracking-[0.16em] text-green-800">Tip</p>
+                <p class="text-sm text-gray-700">Try 5 Marla or 1 Kanal</p>
+              </div>
+            </div>
+            <p class="mt-3 text-sm leading-6 text-gray-600">Type a number, choose the unit, and see instant conversions for common Pakistani property measurements.</p>
+            <input 
+              type="number" 
+              id="value" 
+              placeholder="Enter value" 
+              class="mt-5 w-full rounded-2xl border border-gray-200 bg-white/90 p-4 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+            />
 
-      <select 
-        id="unit" 
-        class="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-green-400"
-      >
-        <option value="marla">Marla</option>
-        <option value="kanal">Kanal</option>
-        <option value="acre">Acre</option>
-        <option value="sqft">Square Feet</option>
-        <option value="sqm">Square Meters</option>
-      </select>
+            <select 
+              id="unit" 
+              class="mt-4 w-full rounded-2xl border border-gray-200 bg-white/90 p-4 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+            >
+              <option value="marla">Marla</option>
+              <option value="kanal">Kanal</option>
+              <option value="acre">Acre</option>
+              <option value="sqft">Square Feet</option>
+              <option value="sqm">Square Meters</option>
+            </select>
 
-      <div id="results" class="space-y-2"></div>
-    </div>
+            <section class="mt-4 grid grid-cols-3 gap-2" aria-label="Quick examples">
+              <button type="button" class="quick-fill rounded-2xl bg-white px-3 py-3 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:bg-green-50" data-value="5" data-unit="marla">5 Marla</button>
+              <button type="button" class="quick-fill rounded-2xl bg-white px-3 py-3 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:bg-green-50" data-value="10" data-unit="marla">10 Marla</button>
+              <button type="button" class="quick-fill rounded-2xl bg-white px-3 py-3 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:bg-green-50" data-value="1" data-unit="kanal">1 Kanal</button>
+            </section>
+
+            <div id="results" class="mt-5 space-y-2"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto mt-8 max-w-6xl text-sm leading-7 text-gray-700">
+      <div class="grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
+        <div class="section-panel rounded-[1.5rem] p-5">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-green-800">How to use</p>
+          <p class="mt-3">This calculator helps with searches such as <em>marla to kanal</em>, <em>kanal to marla</em>, <em>marla to square feet</em>, <em>kanal to square feet</em>, <em>acre to square meter</em> and <em>plot size converter Pakistan</em>. Enter your number, select the unit, and compare results instantly.</p>
+        </div>
+        <div class="section-panel rounded-[1.5rem] p-5">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-green-800">Why people use it</p>
+          <p class="mt-3">Buyers compare plot prices, sellers rewrite ad copy, and builders estimate covered area. The tool is designed to answer those real-world checks quickly on both desktop and mobile.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Explanation -->
-    <div class="w-full max-w-md mt-6 p-4 bg-white rounded-xl shadow-md text-gray-700 text-sm">
-      <h2 class="text-xl font-bold mb-3">Common Pakistani Land Units</h2>
-      <p><strong>Marla:</strong> 1 Marla = 272.25 sq ft ≈ 25.2929 sq m</p>
-      <p><strong>Kanal:</strong> 1 Kanal = 20 Marla = 5445 sq ft ≈ 505.857 sq m</p>
-      <p><strong>Acre:</strong> 1 Acre = 43,560 sq ft ≈ 4046.86 sq m</p>
-      <p><strong>Square Feet:</strong> Standard unit used in houses</p>
-      <p><strong>Square Meter:</strong> Global metric unit for area</p>
-    </div>
+    <section id="units" class="mx-auto mt-8 grid max-w-6xl gap-4 md:grid-cols-2 xl:grid-cols-5">
+      <article class="section-panel rounded-[1.5rem] p-5 text-sm leading-6 text-gray-700 xl:col-span-2">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-green-800">Common Pakistani Land Units</p>
+        <h2 class="mt-2 text-3xl font-bold text-gray-900">Know the units before you compare the prices.</h2>
+        <p class="mt-4">The biggest confusion in property searches usually comes from mixed units. One listing says Marla, another says Kanal, and a map uses square meters. This section keeps the core formulas in one place.</p>
+      </article>
+      <article class="section-panel rounded-[1.5rem] p-5 text-sm leading-6 text-gray-700">
+        <h3 class="text-lg font-bold text-gray-900">Marla</h3>
+        <p class="mt-2">1 Marla = 272.25 sq ft = 25.2929 sq m.</p>
+        <p class="mt-2 text-gray-600">Often used for residential plots and house listings.</p>
+      </article>
+      <article class="section-panel rounded-[1.5rem] p-5 text-sm leading-6 text-gray-700">
+        <h3 class="text-lg font-bold text-gray-900">Kanal</h3>
+        <p class="mt-2">1 Kanal = 20 Marla = 5445 sq ft = 505.857 sq m.</p>
+        <p class="mt-2 text-gray-600">Common for larger residential and agricultural plots.</p>
+      </article>
+      <article class="section-panel rounded-[1.5rem] p-5 text-sm leading-6 text-gray-700">
+        <h3 class="text-lg font-bold text-gray-900">Acre</h3>
+        <p class="mt-2">1 Acre = 43,560 sq ft = 4046.86 sq m.</p>
+        <p class="mt-2 text-gray-600">Useful for farms, commercial land and bigger holdings.</p>
+      </article>
+      <article class="section-panel rounded-[1.5rem] p-5 text-sm leading-6 text-gray-700">
+        <h3 class="text-lg font-bold text-gray-900">Square Feet</h3>
+        <p class="mt-2">Best for covered area, house sizes and rate comparisons.</p>
+      </article>
+      <article class="section-panel rounded-[1.5rem] p-5 text-sm leading-6 text-gray-700">
+        <h3 class="text-lg font-bold text-gray-900">Square Meter</h3>
+        <p class="mt-2">Best for metric documents, surveys and international comparisons.</p>
+      </article>
+    </section>
+
+    <section class="section-panel mx-auto mt-8 max-w-6xl rounded-[1.75rem] p-6 text-gray-700 text-sm leading-7">
+      <h2 class="text-2xl font-bold mb-3 text-gray-800">Popular Land Conversion Searches</h2>
+      <p>People often search for exact conversions before buying or listing land. The most common checks include <a class="font-semibold text-green-700 hover:underline" href="/land-converter/5-marla-in-square-feet/">5 Marla in square feet</a>, <strong>10 Marla in square feet</strong>, <a class="font-semibold text-green-700 hover:underline" href="/land-converter/kanal-to-square-feet/">1 Kanal in square feet</a>, <a class="font-semibold text-green-700 hover:underline" href="/land-converter/kanal-to-marla/">Kanal to Marla</a> and <a class="font-semibold text-green-700 hover:underline" href="/land-converter/acre-to-square-meter/">Acre to Square Meter</a>.</p>
+      <p>Use this page as your main conversion hub, and explore the focused guides below for exact formulas, examples and search-specific answers, including the full <a class="font-semibold text-green-700 hover:underline" href="/land-converter/marla-to-square-feet/">Marla to Square Feet guide</a>.</p>
+    </section>
 
     <!-- FAQ -->
-    <div class="w-full max-w-md mt-6 p-4 bg-white rounded-xl shadow-md">
-      <h2 class="text-xl font-bold mb-3 text-gray-800">Frequently Asked Questions</h2>
+    <section id="faq" class="section-panel mx-auto mt-8 max-w-4xl rounded-[1.75rem] p-6 md:p-8">
+      <p class="text-xs font-bold uppercase tracking-[0.22em] text-green-800">Frequently Asked Questions</p>
+      <h2 class="mt-2 text-3xl font-bold text-gray-800">Clear answers for the conversions people search most</h2>
 
+      <div class="mt-6 grid gap-4 md:grid-cols-2">
+      <div class="rounded-2xl bg-[#f8f5ed] p-5">
       <h3 class="text-md font-semibold mt-3">What is 1 Marla in square feet?</h3>
-      <p class="text-gray-600 mb-2">1 Marla = 272.25 sq ft.</p>
+      <p class="text-gray-600 mb-2 mt-2">1 Marla equals 272.25 square feet, which is about 25.2929 square meters.</p>
+      </div>
 
+      <div class="rounded-2xl bg-[#f8f5ed] p-5">
       <h3 class="text-md font-semibold mt-3">How many Marla in 1 Kanal?</h3>
-      <p class="text-gray-600 mb-2">1 Kanal = 20 Marla.</p>
+      <p class="text-gray-600 mb-2 mt-2">1 Kanal equals 20 Marla, or 5445 square feet.</p>
+      </div>
 
+      <div class="rounded-2xl bg-[#f8f5ed] p-5">
       <h3 class="text-md font-semibold mt-3">How do I convert Acres to sq meters?</h3>
-      <p class="text-gray-600 mb-2">1 Acre = 4046.86 sq m.</p>
+      <p class="text-gray-600 mb-2 mt-2">1 Acre equals 4046.86 square meters, or 43,560 square feet.</p>
+      </div>
 
+      <div class="rounded-2xl bg-[#f8f5ed] p-5">
       <h3 class="text-md font-semibold mt-3">Is this calculator accurate?</h3>
-      <p class="text-gray-600 mb-2">Yes — based on widely-used Pakistani land standards.</p>
+      <p class="text-gray-600 mb-2 mt-2">Yes. It follows widely used Pakistani land measurement standards for Marla, Kanal, Acre, Square Feet and Square Meters.</p>
+      </div>
+      
+      <div class="rounded-2xl bg-[#f8f5ed] p-5">
       <h3 class="text-md font-semibold mt-3">How many square feet is 5 Marla?</h3>
-<p class="text-gray-600 mb-2">5 Marla = 5 × 272.25 = 1361.25 sq ft. Use the converter to calculate custom values.</p>
+<p class="text-gray-600 mb-2 mt-2">5 Marla equals 1361.25 square feet. This is a common residential plot size search in Pakistan.</p>
+      </div>
 
+      <div class="rounded-2xl bg-[#f8f5ed] p-5">
 <h3 class="text-md font-semibold mt-3">How many Kanal is 10890 square feet?</h3>
-<p class="text-gray-600 mb-2">10890 sq ft ≈ 2 Kanal (1 Kanal = 5445 sq ft), the converter shows exact decimals.</p>
+<p class="text-gray-600 mb-2 mt-2">10890 square feet is equal to 2 Kanal because 1 Kanal is 5445 square feet.</p>
+      </div>
+      </div>
 
-    
-    </div>
+    </section>
 
+    <section id="guides" class="section-panel mx-auto mt-8 max-w-6xl rounded-[1.75rem] p-6 text-gray-700 leading-6">
+      <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h2 class="text-2xl font-bold text-gray-800">Popular Conversion Guides</h2>
+          <p class="text-sm text-gray-600 mt-1">Focused pages for the exact searches people make before buying, selling or comparing plot sizes.</p>
+        </div>
+        <a class="text-sm font-semibold text-green-700 hover:underline" href="#converter">Use the main converter</a>
+      </div>
+      <nav class="mt-5 grid gap-3 md:grid-cols-2" aria-label="Related land conversion guides">
+        <a class="group rounded-[1.35rem] border border-gray-200 bg-white p-5 transition hover:-translate-y-1 hover:border-green-300 hover:bg-green-50" href="/land-converter/marla-to-square-feet/">
+          <span class="block text-base font-bold text-gray-900">Marla to Square Feet</span>
+          <span class="mt-1 block text-sm text-gray-600">Convert any Marla value to sq ft with the formula, examples and common residential plot sizes.</span>
+        </a>
+        <a class="group rounded-[1.35rem] border border-gray-200 bg-white p-5 transition hover:-translate-y-1 hover:border-green-300 hover:bg-green-50" href="/land-converter/kanal-to-marla/">
+          <span class="block text-base font-bold text-gray-900">Kanal to Marla</span>
+          <span class="mt-1 block text-sm text-gray-600">Quickly compare larger plots by converting Kanal into Marla for listings and negotiations.</span>
+        </a>
+        <a class="group rounded-[1.35rem] border border-gray-200 bg-white p-5 transition hover:-translate-y-1 hover:border-green-300 hover:bg-green-50" href="/land-converter/kanal-to-square-feet/">
+          <span class="block text-base font-bold text-gray-900">Kanal to Square Feet</span>
+          <span class="mt-1 block text-sm text-gray-600">See the exact sq ft value for 1 Kanal, 2 Kanal and other common plot measurements.</span>
+        </a>
+        <a class="group rounded-[1.35rem] border border-gray-200 bg-white p-5 transition hover:-translate-y-1 hover:border-green-300 hover:bg-green-50" href="/land-converter/acre-to-square-meter/">
+          <span class="block text-base font-bold text-gray-900">Acre to Square Meter</span>
+          <span class="mt-1 block text-sm text-gray-600">Use a clean metric conversion for farms, surveys, maps and larger commercial land areas.</span>
+        </a>
+        <a class="group rounded-[1.35rem] border border-gray-200 bg-white p-5 transition hover:-translate-y-1 hover:border-green-300 hover:bg-green-50 md:col-span-2" href="/land-converter/5-marla-in-square-feet/">
+          <span class="block text-base font-bold text-gray-900">5 Marla in Square Feet</span>
+          <span class="mt-1 block text-sm text-gray-600">Get the direct answer for one of Pakistan's most searched residential plot sizes, plus related conversions.</span>
+        </a>
+      </nav>
+    </section>
+  
   </main>
 
 </body>

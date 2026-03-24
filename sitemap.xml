@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset 
-  xmlns="http://www.sitemmaps.org/schemas/sitemap/0.9"
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
   <url>
     <loc>https://error4am.github.io/land-converter/</loc>
-    <lastmod>2025-11-22</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://error4am.github.io/land-converter/marla-to-square-feet/</loc>
+    <lastmod>2026-03-24</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://error4am.github.io/land-converter/kanal-to-marla/</loc>
+    <lastmod>2026-03-24</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://error4am.github.io/land-converter/kanal-to-square-feet/</loc>
+    <lastmod>2026-03-24</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://error4am.github.io/land-converter/acre-to-square-meter/</loc>
+    <lastmod>2026-03-24</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://error4am.github.io/land-converter/5-marla-in-square-feet/</loc>
+    <lastmod>2026-03-24</lastmod>
+    <priority>0.90</priority>
   </url>
 </urlset>

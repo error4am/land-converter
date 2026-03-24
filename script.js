@@ -3,6 +3,7 @@
   const valueInput = document.getElementById('value');
   const unitSelect = document.getElementById('unit');
   const resultsDiv = document.getElementById('results');
+  const quickFillButtons = document.querySelectorAll('.quick-fill');
 
   // small aria-live element to announce copy actions (accessibility)
   const statusEl = document.createElement('div');
@@ -11,7 +12,13 @@
   document.body.appendChild(statusEl);
 
   // focus on load
-  window.addEventListener('load', () => valueInput && valueInput.focus());
+  window.addEventListener('load', () => {
+    if (!valueInput || !unitSelect) return;
+    if (valueInput.value.trim()) {
+      convertAndRender();
+    }
+    valueInput.focus();
+  });
 
   // debounce helper
   function debounce(fn, wait = 150) {
@@ -168,6 +175,15 @@
   const runConvert = debounce(convertAndRender, 120);
   valueInput.addEventListener('input', runConvert);
   unitSelect.addEventListener('change', convertAndRender);
+
+  quickFillButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      valueInput.value = button.dataset.value || '';
+      unitSelect.value = button.dataset.unit || 'marla';
+      convertAndRender();
+      valueInput.focus();
+    });
+  });
 
   // expose a manual convert if needed
   window.convertAndRender = convertAndRender;
