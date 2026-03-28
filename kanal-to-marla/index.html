@@ -16,87 +16,222 @@
   <meta name="twitter:title" content="Kanal to Marla Converter Pakistan" />
   <meta name="twitter:description" content="Convert Kanal to Marla instantly with formula, examples and FAQs." />
   <link rel="icon" type="image/png" href="../og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-    .animate-fadeIn { animation: fadeIn 0.3s forwards; }
+    :root {
+      --bg: #f6f2e8;
+      --surface: rgba(255, 255, 255, 0.78);
+      --surface-strong: #fffdf9;
+      --line: rgba(55, 65, 81, 0.1);
+      --text: #1f2937;
+      --muted: #5f6b63;
+      --accent: #1f7a5b;
+      --accent-soft: #e4f3eb;
+      --warm: #e7c88a;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn { animation: fadeIn 0.45s forwards; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(231, 200, 138, 0.32), transparent 28%),
+        radial-gradient(circle at top right, rgba(31, 122, 91, 0.14), transparent 24%),
+        linear-gradient(180deg, #fbf8f1 0%, #f3efe4 100%);
+      color: var(--text);
+    }
+    h1, h2 {
+      font-family: 'Source Serif 4', serif;
+      letter-spacing: -0.02em;
+    }
+    .glass-panel {
+      background: var(--surface);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      box-shadow: 0 22px 60px rgba(54, 58, 41, 0.08);
+    }
+    .section-panel {
+      background: var(--surface-strong);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 40px rgba(54, 58, 41, 0.06);
+    }
   </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How many Marla are in 1 Kanal?",
-        "acceptedAnswer": {"@type": "Answer", "text": "1 Kanal equals 20 Marla."}
-      },
-      {
-        "@type": "Question",
-        "name": "How do you convert Kanal to Marla?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Multiply the Kanal value by 20 to get Marla."}
-      },
-      {
-        "@type": "Question",
-        "name": "How many Marla are in 2 Kanal?",
-        "acceptedAnswer": {"@type": "Answer", "text": "2 Kanal equals 40 Marla."}
-      }
+      {"@type": "Question", "name": "How many Marla are in 1 Kanal?", "acceptedAnswer": {"@type": "Answer", "text": "1 Kanal equals 20 Marla."}},
+      {"@type": "Question", "name": "How many Marla are in half Kanal?", "acceptedAnswer": {"@type": "Answer", "text": "0.5 Kanal equals 10 Marla."}},
+      {"@type": "Question", "name": "When is Kanal used more often than Marla?", "acceptedAnswer": {"@type": "Answer", "text": "Kanal is usually used for larger residential plots, farm land and premium property listings."}}
     ]
   }
   </script>
   <script src="../script.js" defer></script>
 </head>
-<body class="bg-gray-100 font-sans text-gray-900">
-  <header class="bg-white shadow-sm">
-    <div class="max-w-3xl mx-auto px-4 py-8">
-      <a class="text-sm font-semibold text-green-700" href="/land-converter/">Back to main land converter</a>
-      <h1 class="mt-3 text-3xl md:text-4xl font-extrabold">Kanal to Marla Converter Pakistan</h1>
-      <p class="mt-3 text-gray-700 leading-7">If you want to convert <strong>Kanal to Marla</strong>, the math is simple but buyers and sellers still search it constantly. This guide gives the exact formula, quick examples and a usable converter for property planning.</p>
+<body class="text-gray-900">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-xl">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4 md:px-6">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-green-800">Pakistan Plot Tools</p>
+        <p class="text-sm text-gray-600">Land conversion, formulas and practical guides</p>
+      </div>
+      <nav class="hidden gap-5 text-sm font-semibold text-gray-700 md:flex">
+        <a class="hover:text-green-700" href="/land-converter/">Home</a>
+        <a class="hover:text-green-700" href="/land-converter/#guides">Guides</a>
+        <a class="hover:text-green-700" href="/land-converter/#faq">FAQ</a>
+      </nav>
     </div>
   </header>
-  <main class="max-w-3xl mx-auto px-4 py-8 space-y-6">
-    <section class="bg-white rounded-xl shadow-md p-6 animate-fadeIn">
-      <h2 class="text-2xl font-bold mb-3">Convert Kanal to Marla</h2>
-      <p class="text-sm text-gray-600 mb-4">Formula: <strong>Kanal x 20 = Marla</strong>.</p>
-      <input type="number" id="value" value="1" placeholder="Enter Kanal" class="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-green-400" />
-      <select id="unit" class="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-green-400">
-        <option value="marla">Marla</option>
+
+  <!-- Main -->
+  <main class="px-4 pb-16 pt-6 md:px-6">
+    
+    <!-- Hero Section -->
+    <section class="relative mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-white/50 px-5 py-10 md:px-8 md:py-12 mb-8 animate-fadeIn">
+      <div class="absolute inset-0 bg-gradient-to-br from-white/60 via-white/20 to-transparent"></div>
+      <div class="relative">
+        <div class="mb-4 flex flex-wrap gap-2">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-green-800 bg-[var(--accent-soft)] rounded-full px-3 py-1">Kanal Conversion</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900">Kanal to Marla Converter</h1>
+        <p class="mt-4 text-lg text-gray-700 leading-7">Quickly compare larger plots by converting <strong>Kanal into Marla</strong> for listings and negotiations. This page has the exact formula and examples for Pakistani property searches.</p>
+      </div>
+    </section>
+
+    <!-- Converter Tool -->
+    <section class="mx-auto max-w-4xl glass-panel rounded-[1.75rem] p-6 md:p-8 mb-8 animate-fadeIn">
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-green-800">Instant Tool</p>
+          <h2 class="mt-2 text-3xl font-bold text-gray-900">Convert Kanal to Marla</h2>
+        </div>
+        <div class="rounded-2xl bg-[var(--accent-soft)] px-3 py-2 text-right">
+          <p class="text-xs font-bold uppercase tracking-[0.16em] text-green-800">Formula</p>
+          <p class="text-sm text-gray-700">Kanal × 20</p>
+        </div>
+      </div>
+      <p class="text-sm text-gray-600 mb-5">Type a number, choose the unit, and see instant conversions for common Pakistani property measurements.</p>
+      <input 
+        type="number" 
+        id="value" 
+        value="1"
+        placeholder="Enter Kanal" 
+        class="w-full rounded-2xl border border-gray-200 bg-white/90 p-4 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 mb-4"
+      />
+      <select 
+        id="unit" 
+        class="w-full rounded-2xl border border-gray-200 bg-white/90 p-4 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 mb-4"
+      >
         <option value="kanal" selected>Kanal</option>
+        <option value="marla">Marla</option>
         <option value="acre">Acre</option>
         <option value="sqft">Square Feet</option>
         <option value="sqm">Square Meters</option>
       </select>
-      <div class="grid grid-cols-3 gap-2 mb-4">
-        <button type="button" class="quick-fill rounded-lg bg-gray-50 px-3 py-2 text-sm font-semibold" data-value="0.5" data-unit="kanal">0.5 Kanal</button>
-        <button type="button" class="quick-fill rounded-lg bg-gray-50 px-3 py-2 text-sm font-semibold" data-value="1" data-unit="kanal">1 Kanal</button>
-        <button type="button" class="quick-fill rounded-lg bg-gray-50 px-3 py-2 text-sm font-semibold" data-value="2" data-unit="kanal">2 Kanal</button>
-      </div>
+      <section class="grid grid-cols-3 gap-2 mb-5">
+        <button type="button" class="quick-fill rounded-2xl bg-white px-3 py-3 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:bg-green-50" data-value="1" data-unit="kanal">1 Kanal</button>
+        <button type="button" class="quick-fill rounded-2xl bg-white px-3 py-3 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:bg-green-50" data-value="0.5" data-unit="kanal">0.5 Kanal</button>
+        <button type="button" class="quick-fill rounded-2xl bg-white px-3 py-3 text-sm font-semibold text-gray-700 shadow-sm ring-1 ring-gray-200 transition hover:-translate-y-0.5 hover:bg-green-50" data-value="2" data-unit="kanal">2 Kanal</button>
+      </section>
       <div id="results" class="space-y-2"></div>
     </section>
-    <section class="bg-white rounded-xl shadow-md p-6 text-gray-700 leading-7">
-      <h2 class="text-2xl font-bold mb-3">Why This Conversion Matters</h2>
-      <p>Pakistani property ads often mix Kanal and Marla in the same market. A buyer might search for a 1 Kanal house, while another listing describes the same size as 20 Marla. This page bridges that gap quickly.</p>
-      <p>Useful examples: <strong>0.5 Kanal = 10 Marla</strong>, <strong>1 Kanal = 20 Marla</strong>, and <strong>2 Kanal = 40 Marla</strong>.</p>
+
+    <!-- Content Grid -->
+    <section class="mx-auto max-w-4xl grid gap-6 md:grid-cols-2 mb-8">
+      
+      <!-- When Used -->
+      <div class="section-panel rounded-[1.5rem] p-6">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-green-800 mb-3">Context</p>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">When Kanal is Used</h3>
+        <p class="text-gray-700 leading-7">Kanal is usually used for larger residential plots, farm land and premium property listings. Converting to Marla helps you understand the size compared to standard residential plots.</p>
+      </div>
+
+      <!-- Key Conversions -->
+      <div class="section-panel rounded-[1.5rem] p-6">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-green-800 mb-3">Key Facts</p>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Conversion Examples</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start gap-3">
+            <span class="text-green-700 font-bold">✓</span>
+            <span><strong>1 Kanal</strong> = 20 Marla</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-green-700 font-bold">✓</span>
+            <span><strong>0.5 Kanal</strong> = 10 Marla</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-green-700 font-bold">✓</span>
+            <span><strong>2 Kanal</strong> = 40 Marla</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-green-700 font-bold">✓</span>
+            <span><strong>1 Kanal</strong> = 5445 sq ft</span>
+          </li>
+        </ul>
+      </div>
     </section>
-    <section class="bg-white rounded-xl shadow-md p-6 text-gray-700 leading-7">
-      <h2 class="text-2xl font-bold mb-3">FAQ</h2>
-      <h3 class="font-semibold mt-3">How many Marla are in 1 Kanal?</h3>
-      <p>1 Kanal equals 20 Marla.</p>
-      <h3 class="font-semibold mt-3">How many Marla are in half Kanal?</h3>
-      <p>0.5 Kanal equals 10 Marla.</p>
-      <h3 class="font-semibold mt-3">When is Kanal used more often than Marla?</h3>
-      <p>Kanal is usually used for larger residential plots, farm land and premium property listings.</p>
+
+    <!-- FAQ -->
+    <section class="section-panel mx-auto max-w-4xl rounded-[1.75rem] p-6 md:p-8 mb-8">
+      <p class="text-xs font-bold uppercase tracking-[0.22em] text-green-800 mb-3">Help</p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="rounded-2xl bg-white/50 p-5">
+          <h3 class="text-md font-semibold text-gray-900 mb-2">How many Marla are in 1 Kanal?</h3>
+          <p class="text-gray-700">1 Kanal equals 20 Marla.</p>
+        </div>
+        <div class="rounded-2xl bg-white/50 p-5">
+          <h3 class="text-md font-semibold text-gray-900 mb-2">How many Marla are in half Kanal?</h3>
+          <p class="text-gray-700">0.5 Kanal equals 10 Marla.</p>
+        </div>
+        <div class="rounded-2xl bg-white/50 p-5">
+          <h3 class="text-md font-semibold text-gray-900 mb-2">When is Kanal more useful than Marla?</h3>
+          <p class="text-gray-700">For larger residential plots, farms and premium property listings.</p>
+        </div>
+        <div class="rounded-2xl bg-white/50 p-5">
+          <h3 class="text-md font-semibold text-gray-900 mb-2">What's the formula?</h3>
+          <p class="text-gray-700">Multiply Kanal by 20 to get Marla. So: 1 × 20 = 20 Marla.</p>
+        </div>
+      </div>
     </section>
-     <section class="bg-white rounded-xl shadow-md p-6 text-sm text-gray-700">
-       <h2 class="text-xl font-bold mb-3">Related Guides</h2>
-       <nav class="grid gap-2 md:grid-cols-2">
-         <a class="block hover:text-green-700 font-semibold" href="/land-converter/">Main Land Converter</a>
-         <a class="block hover:text-green-700 font-semibold" href="/land-converter/kanal-to-square-feet/">Kanal to Square Feet</a>
-         <a class="block hover:text-green-700 font-semibold" href="/land-converter/marla-to-square-feet/">Marla to Square Feet</a>
-         <a class="block hover:text-green-700 font-semibold" href="/land-converter/5-marla-in-square-feet/">5 Marla in Square Feet</a>
-         <a class="block hover:text-green-700 font-semibold" href="/land-converter/acre-to-square-meter/">Acre to Square Meter</a>
-       </nav>
-     </section>
+
+    <!-- Related Guides -->
+    <section class="section-panel mx-auto max-w-4xl rounded-[1.75rem] p-6 md:p-8">
+      <p class="text-xs font-bold uppercase tracking-[0.22em] text-green-800 mb-3">Explore More</p>
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Guides</h2>
+      <nav class="grid gap-3 md:grid-cols-2">
+        <a class="group rounded-[1.35rem] border border-gray-200 bg-white p-5 transition hover:-translate-y-1 hover:border-green-300 hover:bg-green-50" href="/land-converter/">
+          <span class="block text-base font-bold text-gray-900 group-hover:text-green-700">Main Land Converter</span>
+          <span class="mt-1 block text-sm text-gray-600">Use our full converter for all land units</span>
+        </a>
+        <a class="group rounded-[1.35rem] border border-gray-200 bg-white p-5 transition hover:-translate-y-1 hover:border-green-300 hover:bg-green-50" href="/land-converter/kanal-to-square-feet/">
+          <span class="block text-base font-bold text-gray-900 group-hover:text-green-700">Kanal to Square Feet</span>
+          <span class="mt-1 block text-sm text-gray-600">See exact sq ft for 1 Kanal & larger plots</span>
+        </a>
+        <a class="group rounded-[1.35rem] border border-gray-200 bg-white p-5 transition hover:-translate-y-1 hover:border-green-300 hover:bg-green-50" href="/land-converter/marla-to-square-feet/">
+          <span class="block text-base font-bold text-gray-900 group-hover:text-green-700">Marla to Square Feet</span>
+          <span class="mt-1 block text-sm text-gray-600">Convert any Marla value with formula</span>
+        </a>
+        <a class="group rounded-[1.35rem] border border-gray-200 bg-white p-5 transition hover:-translate-y-1 hover:border-green-300 hover:bg-green-50" href="/land-converter/5-marla-in-square-feet/">
+          <span class="block text-base font-bold text-gray-900 group-hover:text-green-700">5 Marla in Square Feet</span>
+          <span class="mt-1 block text-sm text-gray-600">Most searched residential plot size</span>
+        </a>
+        <a class="group rounded-[1.35rem] border border-gray-200 bg-white p-5 transition hover:-translate-y-1 hover:border-green-300 hover:bg-green-50" href="/land-converter/acre-to-square-meter/">
+          <span class="block text-base font-bold text-gray-900 group-hover:text-green-700">Acre to Square Meter</span>
+          <span class="mt-1 block text-sm text-gray-600">Metric conversion for farms & surveys</span>
+        </a>
+      </nav>
+    </section>
+
   </main>
+
 </body>
 </html>
