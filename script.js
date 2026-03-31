@@ -11,6 +11,8 @@
   statusEl.className = 'sr-only';
   document.body.appendChild(statusEl);
 
+  if (!resultsDiv) return;
+
   // focus on load
   window.addEventListener('load', () => {
     if (!valueInput || !unitSelect) return;
@@ -172,12 +174,15 @@
   }
 
   // hook inputs (debounced)
-  const runConvert = debounce(convertAndRender, 120);
-  valueInput.addEventListener('input', runConvert);
-  unitSelect.addEventListener('change', convertAndRender);
+  if (valueInput && unitSelect) {
+    const runConvert = debounce(convertAndRender, 120);
+    valueInput.addEventListener('input', runConvert);
+    unitSelect.addEventListener('change', convertAndRender);
+  }
 
   quickFillButtons.forEach((button) => {
     button.addEventListener('click', () => {
+      if (!valueInput || !unitSelect) return;
       valueInput.value = button.dataset.value || '';
       unitSelect.value = button.dataset.unit || 'marla';
       convertAndRender();
