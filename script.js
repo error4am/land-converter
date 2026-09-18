@@ -19,7 +19,7 @@
     kanal: 5445,
     acre: 43560,
     sqft: 1,
-    sqm: 10.7639 // sqm -> sqft multiplier
+    sqm: 10.7639104167 // sqm -> sqft multiplier
   };
 
   const AREA_LABELS = {
@@ -90,7 +90,7 @@
         'Kanal': sqft / FACTORS.kanal,
         'Acre': sqft / FACTORS.acre,
         'Square Feet': sqft,
-        'Square Meters': sqft * 0.092903
+        'Square Meters': sqft / FACTORS.sqm
       };
 
       // build fragment to avoid repeated reflow
